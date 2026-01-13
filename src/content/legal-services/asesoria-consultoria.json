@@ -1,0 +1,226 @@
+{
+  "id": "asesoria-consultoria",
+  "slug": "asesoria-consultoria",
+  "category": "legal",
+  "icon": "document",
+  "es": {
+    "seo": {
+      "title": "Asesoría y Consultoría Legal - Bufete Jurídico Pazos Chávez",
+      "description": "Diseño de estrategias legales para que la operación de sus negocios, productos o servicios se realice conforme al más estricto apego a la ley. Más de 40 años de experiencia.",
+      "keywords": [
+        "asesoría legal",
+        "consultoría jurídica",
+        "estrategias legales",
+        "cumplimiento normativo",
+        "bufete abogados CDMX"
+      ]
+    },
+    "hero": {
+      "badge": "Servicios Legales",
+      "title": "Asesoría y Consultoría Legal",
+      "subtitle": "Diseño de estrategias legales para que la operación de sus negocios se realice conforme al más estricto apego a la ley"
+    },
+    "overview": {
+      "heading": "Estrategias Legales Integrales para su Negocio",
+      "paragraphs": [
+        "En Bufete Jurídico Pazos Chávez entendemos que cada negocio es único y requiere soluciones legales personalizadas. Con más de 40 años de experiencia, nuestro equipo de abogados especializados desarrolla estrategias legales integrales que permiten a nuestros clientes operar con la seguridad de estar en pleno cumplimiento de la normatividad aplicable.",
+        "Nuestro enfoque se centra en comprender a profundidad su modelo de negocio, productos y servicios para identificar riesgos legales potenciales y diseñar estrategias preventivas que protejan sus intereses y faciliten el crecimiento sostenible de su organización."
+      ]
+    },
+    "services": {
+      "title": "Nuestros Servicios de Asesoría",
+      "items": [
+        {
+          "icon": "document-check",
+          "title": "Análisis de Cumplimiento Normativo",
+          "description": "Revisión exhaustiva de la operación de su negocio para identificar el marco legal aplicable y verificar el cumplimiento de todas las disposiciones legales y reglamentarias correspondientes."
+        },
+        {
+          "icon": "clipboard-check",
+          "title": "Due Diligence Legal",
+          "description": "Evaluación integral de aspectos legales en procesos de fusión, adquisición o inversión, identificando riesgos y oportunidades para la toma de decisiones informadas."
+        },
+        {
+          "icon": "building",
+          "title": "Estructuración de Negocios",
+          "description": "Diseño de estructuras corporativas óptimas para su negocio, considerando aspectos fiscales, administrativos y de protección patrimonial desde una perspectiva integral."
+        },
+        {
+          "icon": "document-text",
+          "title": "Elaboración de Contratos",
+          "description": "Redacción y revisión de todo tipo de contratos comerciales, garantizando que sus intereses estén debidamente protegidos y que los términos sean claros y ejecutables."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Gestión de Riesgos Legales",
+          "description": "Identificación, evaluación y mitigación de riesgos legales asociados a sus operaciones, implementando mecanismos de control y políticas preventivas."
+        },
+        {
+          "icon": "users",
+          "title": "Asesoría Continua",
+          "description": "Acompañamiento permanente en la toma de decisiones estratégicas, proporcionando criterios jurídicos sólidos para la resolución de situaciones cotidianas y extraordinarias."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "¿Por qué elegir nuestro servicio de asesoría?",
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Años de Experiencia",
+          "description": "Más de cuatro décadas asesorando a empresas de todos los tamaños y sectores"
+        },
+        {
+          "value": "100%",
+          "label": "Personalizado",
+          "description": "Cada estrategia legal se diseña específicamente para su situación particular"
+        },
+        {
+          "value": "24/7",
+          "label": "Disponibilidad",
+          "description": "Soporte legal cuando lo necesite para decisiones críticas de negocio"
+        }
+      ]
+    },
+    "industries": {
+      "title": "Sectores que Atendemos",
+      "items": [
+        { "emoji": "🏢", "name": "Corporativo" },
+        { "emoji": "🏪", "name": "Comercio" },
+        { "emoji": "🏗️", "name": "Construcción" },
+        { "emoji": "🏥", "name": "Salud" },
+        { "emoji": "🏭", "name": "Manufactura" },
+        { "emoji": "🍽️", "name": "Restaurantes" },
+        { "emoji": "💻", "name": "Tecnología" },
+        { "emoji": "🎓", "name": "Educación" }
+      ]
+    },
+    "relatedServices": [
+      {
+        "slug": "derecho-fiscal",
+        "title": "Derecho Fiscal",
+        "description": "Análisis integral en materia de impuestos"
+      },
+      {
+        "slug": "derecho-civil-mercantil",
+        "title": "Derecho Civil y Mercantil",
+        "description": "Resolución de conflictos y litigio"
+      },
+      {
+        "slug": "cobranza",
+        "title": "Cobranza",
+        "description": "Recuperación de cartera vencida"
+      }
+    ]
+  },
+  "en": {
+    "seo": {
+      "title": "Legal Advisory and Consulting - Pazos Chávez Law Firm",
+      "description": "Design of legal strategies to ensure your business operations comply with the strictest legal standards. Over 40 years of experience.",
+      "keywords": [
+        "legal advisory",
+        "legal consulting",
+        "legal strategies",
+        "regulatory compliance",
+        "law firm Mexico City"
+      ]
+    },
+    "hero": {
+      "badge": "Legal Services",
+      "title": "Legal Advisory and Consulting",
+      "subtitle": "Design of legal strategies to ensure your business operations comply with the strictest legal standards"
+    },
+    "overview": {
+      "heading": "Comprehensive Legal Strategies for Your Business",
+      "paragraphs": [
+        "At Bufete Jurídico Pazos Chávez, we understand that every business is unique and requires personalized legal solutions. With over 40 years of experience, our team of specialized attorneys develops comprehensive legal strategies that enable our clients to operate with the security of being in full compliance with applicable regulations.",
+        "Our approach focuses on deeply understanding your business model, products, and services to identify potential legal risks and design preventive strategies that protect your interests and facilitate sustainable growth for your organization."
+      ]
+    },
+    "services": {
+      "title": "Our Advisory Services",
+      "items": [
+        {
+          "icon": "document-check",
+          "title": "Regulatory Compliance Analysis",
+          "description": "Thorough review of your business operations to identify applicable legal framework and verify compliance with all corresponding legal and regulatory provisions."
+        },
+        {
+          "icon": "clipboard-check",
+          "title": "Legal Due Diligence",
+          "description": "Comprehensive evaluation of legal aspects in merger, acquisition, or investment processes, identifying risks and opportunities for informed decision-making."
+        },
+        {
+          "icon": "building",
+          "title": "Business Structuring",
+          "description": "Design of optimal corporate structures for your business, considering tax, administrative, and asset protection aspects from a comprehensive perspective."
+        },
+        {
+          "icon": "document-text",
+          "title": "Contract Drafting",
+          "description": "Drafting and review of all types of commercial contracts, ensuring your interests are properly protected and terms are clear and enforceable."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Legal Risk Management",
+          "description": "Identification, evaluation, and mitigation of legal risks associated with your operations, implementing control mechanisms and preventive policies."
+        },
+        {
+          "icon": "users",
+          "title": "Ongoing Advisory",
+          "description": "Permanent support in strategic decision-making, providing solid legal criteria for resolving daily and extraordinary situations."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Why choose our advisory service?",
+      "stats": [
+        {
+          "value": "40+",
+          "label": "Years of Experience",
+          "description": "Over four decades advising companies of all sizes and sectors"
+        },
+        {
+          "value": "100%",
+          "label": "Personalized",
+          "description": "Each legal strategy is specifically designed for your particular situation"
+        },
+        {
+          "value": "24/7",
+          "label": "Availability",
+          "description": "Legal support when you need it for critical business decisions"
+        }
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "items": [
+        { "emoji": "🏢", "name": "Corporate" },
+        { "emoji": "🏪", "name": "Retail" },
+        { "emoji": "🏗️", "name": "Construction" },
+        { "emoji": "🏥", "name": "Healthcare" },
+        { "emoji": "🏭", "name": "Manufacturing" },
+        { "emoji": "🍽️", "name": "Restaurants" },
+        { "emoji": "💻", "name": "Technology" },
+        { "emoji": "🎓", "name": "Education" }
+      ]
+    },
+    "relatedServices": [
+      {
+        "slug": "tax-law",
+        "title": "Tax Law",
+        "description": "Comprehensive tax analysis"
+      },
+      {
+        "slug": "civil-commercial-law",
+        "title": "Civil & Commercial Law",
+        "description": "Conflict resolution and litigation"
+      },
+      {
+        "slug": "collection",
+        "title": "Collection",
+        "description": "Past-due portfolio recovery"
+      }
+    ]
+  }
+}

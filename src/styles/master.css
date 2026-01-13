@@ -1,0 +1,465 @@
+@import "tailwindcss";
+
+/* ============================================
+   MASTER TAILWIND CSS FILE
+   All design tokens, components, and utilities
+   NO inline styles or custom CSS allowed elsewhere
+   ============================================ */
+
+/* ========== COLOR TOKENS ========== */
+@theme {
+    /* Primary Brand Colors */
+    --color-main-blue-50: #e6eaf0;
+    --color-main-blue-100: #ccd5e1;
+    --color-main-blue-200: #99abc3;
+    --color-main-blue-300: #6681a5;
+    --color-main-blue-400: #335787;
+    --color-main-blue-500: #0a2240;
+    --color-main-blue-600: #091e3a;
+    --color-main-blue-700: #071933;
+    --color-main-blue-800: #06152d;
+    --color-main-blue-900: #041026;
+    --color-main-blue-950: #020820;
+
+    /* Secondary Brand Colors */
+    --color-gold-50: #fbf4e0;
+    --color-gold-100: #f7e7b8;
+    --color-gold-200: #f3d98b;
+    --color-gold-300: #c9a86e;
+    --color-gold-400: #a97d31;
+    --color-gold-500: #976527;
+    --color-gold-600: #91603e;
+    --color-gold-700: #b1873e;
+    --color-gold-800: #a97d31;
+
+    /* Text Colors */
+    --color-text-gray: #888888;
+}
+
+/* ========== BASE STYLES ========== */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased bg-white text-gray-900;
+        font-family: 'Tinos', serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Tinos', serif;
+        font-weight: 400;
+    }
+}
+
+/* ========== COMPONENT CLASSES ========== */
+@layer components {
+
+    /* ===== CARD COMPONENTS ===== */
+
+    /* Standard Content Card (Homepage & All Pages) */
+    .card-standard {
+        @apply bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-200;
+    }
+
+    /* Icon Container for Cards */
+    .card-icon {
+        @apply w-12 h-12 flex items-center justify-center mb-4 text-gold-700 transition-transform;
+    }
+
+    .card-standard:hover .card-icon {
+        @apply scale-110;
+    }
+
+    /* Hero Icon Container */
+    .hero-icon {
+        @apply w-16 h-16 flex items-center justify-center text-gold-700;
+    }
+
+    /* Card Title */
+    .card-title {
+        @apply text-lg text-gray-900 mb-3 transition-colors;
+    }
+
+    .card-standard:hover .card-title {
+        @apply text-main-blue-700;
+    }
+
+    /* Card Description */
+    .card-description {
+        @apply text-sm text-gray-600 leading-relaxed;
+    }
+
+    /* Card Link */
+    .card-link {
+        @apply mt-4 text-main-blue-700 transition-colors text-sm;
+    }
+
+    .card-standard:hover .card-link {
+        @apply text-main-blue-800;
+    }
+
+    /* CTA Card */
+    .card-cta {
+        @apply bg-main-blue-50 rounded-xl p-8 border border-main-blue-100 text-center;
+    }
+
+    /* CTA Card Title */
+    .card-cta-title {
+        @apply text-2xl text-main-blue-950 mb-4;
+    }
+
+    /* CTA Card Description */
+    .card-cta-description {
+        @apply text-gray-600 mb-6;
+    }
+
+    /* Highlight Card (Dark Blue Background) */
+    .card-highlight-dark {
+        @apply bg-main-blue-950 rounded-2xl p-8 text-white;
+    }
+
+    .card-highlight-medium {
+        @apply bg-main-blue-700 rounded-2xl p-8 text-white;
+    }
+
+    .card-highlight-light {
+        @apply bg-main-blue-500 rounded-2xl p-8 text-white;
+    }
+
+    /* Stats Card */
+    .card-stats {
+        @apply bg-white rounded-lg p-6 shadow-md;
+    }
+
+    /* ===== BUTTON COMPONENTS ===== */
+
+    /* Primary Button */
+    .btn-primary {
+        @apply inline-block bg-main-blue-700 text-white px-8 py-3 rounded hover:bg-main-blue-800 transition-colors;
+    }
+
+    /* Secondary Button (Outlined) */
+    .btn-secondary {
+        @apply px-8 py-4 bg-transparent border-2 border-main-blue-500 text-main-blue-500 font-semibold rounded-lg hover:bg-main-blue-50 transition-colors;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+        @apply w-full bg-main-blue-500 text-white font-semibold py-4 rounded-lg hover:bg-main-blue-700 transition-colors shadow-md;
+    }
+
+    /* Social Button */
+    .btn-social {
+        @apply w-12 h-12 rounded-lg flex items-center justify-center text-white transition-colors;
+    }
+
+    .btn-social-facebook {
+        @apply bg-main-blue-500 hover:bg-main-blue-700;
+    }
+
+    .btn-social-linkedin {
+        @apply bg-main-blue-700 hover:bg-main-blue-800;
+    }
+
+    .btn-social-footer {
+        @apply w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-main-blue-500 transition-colors;
+    }
+
+    /* ===== HERO COMPONENTS ===== */
+
+    /* Hero Section */
+    .hero-section {
+        @apply relative h-screen flex items-center justify-center;
+    }
+
+    /* Hero Background Container */
+    .hero-bg {
+        @apply absolute inset-0 bg-cover bg-center bg-no-repeat;
+    }
+
+    /* Hero Overlay */
+    .hero-overlay {
+        @apply absolute inset-0 bg-white/80;
+    }
+
+    /* Service Hero Section */
+    .service-hero {
+        @apply relative h-96 bg-main-blue-950;
+    }
+
+    /* Service Hero Image */
+    .service-hero-img {
+        @apply absolute inset-0 w-full h-full object-cover opacity-30;
+    }
+
+    /* Service Hero Gradient */
+    .service-hero-gradient {
+        @apply absolute inset-0 bg-gradient-to-b from-main-blue-950/80 to-main-blue-950/95;
+    }
+
+    /* Service Hero Content */
+    .service-hero-content {
+        @apply relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center;
+    }
+
+    /* Hero Badge */
+    .hero-badge {
+        @apply inline-flex items-center space-x-2 bg-main-blue-50 px-4 py-2 rounded-full text-main-blue-500 mb-8;
+    }
+
+    /* ===== SECTION COMPONENTS ===== */
+
+    /* Section Container */
+    .section {
+        @apply py-20;
+    }
+
+    /* Section Background White */
+    .section-bg-white {
+        @apply bg-white;
+    }
+
+    /* Section Background Gray */
+    .section-bg-gray {
+        @apply bg-gray-50;
+    }
+
+    /* Section Title */
+    .section-title {
+        @apply text-4xl md:text-5xl text-gray-900;
+    }
+
+    /* Section Title Centered */
+    .section-title-center {
+        @apply text-3xl md:text-4xl text-gray-900 text-center;
+    }
+
+    /* Section Subtitle */
+    .section-subtitle {
+        @apply text-xl text-gray-600;
+    }
+
+    /* Section Header Container */
+    .section-header {
+        @apply text-center mb-12;
+    }
+
+    /* Section Header with Flex */
+    .section-header-flex {
+        @apply flex justify-between items-center mb-12;
+    }
+
+    /* ===== GRID LAYOUTS ===== */
+
+    /* Standard 2-Column Grid */
+    .grid-2-col {
+        @apply grid md:grid-cols-2 gap-6;
+    }
+
+    /* Standard 3-Column Grid */
+    .grid-3-col {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+    }
+
+    /* Services Grid (Homepage) */
+    .grid-services {
+        @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+    }
+
+    /* ===== NAVBAR COMPONENTS ===== */
+
+    /* Navbar Container */
+    .navbar {
+        @apply fixed w-full bg-white shadow-md z-50 border-b border-gray-200;
+    }
+
+    /* Navbar Inner */
+    .navbar-inner {
+        @apply container mx-auto px-4;
+    }
+
+    /* Navbar Content */
+    .navbar-content {
+        @apply flex justify-between items-center h-20;
+    }
+
+    /* Navbar Link */
+    .navbar-link {
+        @apply text-gray-700 hover:text-main-blue-500 transition-colors font-medium;
+    }
+
+    /* Language Switcher Button Active */
+    .lang-btn-active {
+        @apply px-3 py-1 rounded-md bg-main-blue-500 text-white transition-colors;
+    }
+
+    /* Language Switcher Button Inactive */
+    .lang-btn-inactive {
+        @apply px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100 transition-colors;
+    }
+
+    /* ===== FOOTER COMPONENTS ===== */
+
+    /* Footer Container */
+    .footer {
+        @apply bg-main-blue-950 text-white py-12;
+    }
+
+    /* Footer Link */
+    .footer-link {
+        @apply text-gray-400 hover:text-white transition-colors;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+
+    /* Hero Title */
+    .hero-title {
+        @apply text-4xl md:text-5xl text-white mb-4;
+    }
+
+    /* Hero Description */
+    .hero-description {
+        @apply text-xl text-gray-300 max-w-3xl;
+    }
+
+    /* Hero Subtitle */
+    .hero-subtitle {
+        @apply text-2xl md:text-3xl text-main-blue-500 mb-4;
+    }
+
+    /* Stat Value */
+    .stat-value {
+        @apply text-4xl text-main-blue-500 mb-2;
+    }
+
+    /* Stat Label */
+    .stat-label {
+        @apply text-sm text-gray-600;
+    }
+
+    /* Body Text */
+    .body-text {
+        @apply text-gray-600 leading-relaxed;
+    }
+
+    /* Body Text Large */
+    .body-text-large {
+        @apply text-lg text-gray-700 leading-relaxed;
+    }
+
+    /* Link Text with Arrow */
+    .link-arrow {
+        @apply text-main-blue-700 hover:text-main-blue-800 transition-colors;
+    }
+
+    /* ===== FORM COMPONENTS ===== */
+
+    /* Form Input */
+    .form-input {
+        @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main-blue-500 focus:border-transparent;
+    }
+
+    /* Form Textarea */
+    .form-textarea {
+        @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main-blue-500 focus:border-transparent resize-none;
+    }
+
+    /* Form Label */
+    .form-label {
+        @apply block text-gray-700 mb-2 font-medium;
+    }
+
+    /* ===== CONTACT COMPONENTS ===== */
+
+    /* Contact Info Card */
+    .contact-card {
+        @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300;
+    }
+
+    .contact-card-compact {
+        @apply bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+    }
+
+    /* Contact Icon */
+    .contact-icon {
+        @apply w-12 h-12 text-gold-700;
+    }
+
+    /* ===== SVG ICON COMPONENTS ===== */
+
+    /* SVG Icon Standard */
+    .svg-icon {
+        @apply w-full h-full;
+    }
+
+    /* SVG Stroke Settings */
+    .svg-stroke {
+        @apply fill-none stroke-current;
+    }
+
+    /* ===== UTILITY COMPONENTS ===== */
+
+    /* Container */
+    .container-custom {
+        @apply container mx-auto px-4;
+    }
+
+    /* Max Width Container */
+    .container-narrow {
+        @apply max-w-4xl mx-auto;
+    }
+
+    .container-wide {
+        @apply max-w-6xl mx-auto;
+    }
+
+    .container-full {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Line Clamp */
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Background Image */
+    .bg-hero-image {
+        background-image: url('/images/homehero.png');
+    }
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-main-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-main-blue-700;
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+
+    .navbar,
+    .footer {
+        display: none;
+    }
+}

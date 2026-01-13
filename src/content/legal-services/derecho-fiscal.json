@@ -1,0 +1,228 @@
+{
+  "id": "derecho-fiscal",
+  "slug": "derecho-fiscal",
+  "category": "legal",
+  "icon": "calculator",
+  "es": {
+    "seo": {
+      "title": "Derecho Fiscal - Asesoría Tributaria Especializada | Pazos Chávez",
+      "description": "Análisis integral en materia de impuestos, planeación fiscal y representación ante SAT y Tribunal de Justicia Administrativa. Expertos fiscalistas con 40+ años de experiencia.",
+      "keywords": [
+        "derecho fiscal",
+        "asesoría tributaria",
+        "SAT",
+        "planeación fiscal",
+        "controversias fiscales",
+        "abogados fiscalistas CDMX"
+      ]
+    },
+    "hero": {
+      "badge": "Servicios Legales",
+      "title": "Derecho Fiscal",
+      "subtitle": "Análisis integral en materia de impuestos y representación experta ante autoridades fiscales"
+    },
+    "overview": {
+      "heading": "Soluciones Fiscales Estratégicas",
+      "paragraphs": [
+        "El ámbito fiscal representa uno de los aspectos más complejos y críticos para cualquier persona física o moral. Con más de 40 años de experiencia, nuestro equipo de abogados fiscalistas ofrece asesoría integral que va desde la planeación fiscal preventiva hasta la defensa en controversias ante autoridades.",
+        "Nos especializamos en el análisis profundo de la situación fiscal de nuestros clientes, identificando oportunidades de optimización legítima y diseñando estrategias que aseguren el cumplimiento de obligaciones mientras se maximiza la eficiencia tributaria."
+      ]
+    },
+    "services": {
+      "title": "Servicios Especializados en Materia Fiscal",
+      "items": [
+        {
+          "icon": "chart-bar",
+          "title": "Planeación Fiscal Estratégica",
+          "description": "Diseño de estrategias fiscales legales que optimicen la carga tributaria, considerando la naturaleza específica de su actividad y estructura corporativa."
+        },
+        {
+          "icon": "document-search",
+          "title": "Auditorías Fiscales",
+          "description": "Revisión preventiva de cumplimiento de obligaciones fiscales y preparación para enfrentar revisiones por parte de autoridades hacendarias."
+        },
+        {
+          "icon": "scale",
+          "title": "Controversias ante SAT",
+          "description": "Representación legal en recursos de revocación, procedimientos administrativos y defensa ante requerimientos, multas y créditos fiscales."
+        },
+        {
+          "icon": "briefcase",
+          "title": "Litigio Fiscal",
+          "description": "Defensa especializada ante el Tribunal Federal de Justicia Administrativa en juicios de nulidad y procedimientos contenciosos administrativos."
+        },
+        {
+          "icon": "document-text",
+          "title": "Dictámenes Fiscales",
+          "description": "Elaboración y revisión de dictámenes fiscales por contador público autorizado, garantizando el cumplimiento de requisitos legales."
+        },
+        {
+          "icon": "shield",
+          "title": "Compliance Fiscal",
+          "description": "Implementación de sistemas y políticas de cumplimiento fiscal preventivo, reduciendo riesgos de contingencias tributarias."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Ventajas de Nuestro Servicio Fiscal",
+      "stats": [
+        {
+          "value": "95%",
+          "label": "Casos Exitosos",
+          "description": "Alta tasa de éxito en controversias y juicios fiscales"
+        },
+        {
+          "value": "40+",
+          "label": "Años de Experiencia",
+          "description": "Conocimiento profundo del sistema tributario mexicano"
+        },
+        {
+          "value": "24h",
+          "label": "Respuesta Rápida",
+          "description": "Atención inmediata ante requerimientos urgentes del SAT"
+        }
+      ]
+    },
+    "industries": {
+      "title": "Especialización por Sector",
+      "items": [
+        { "emoji": "🏢", "name": "Empresarial" },
+        { "emoji": "🏗️", "name": "Inmobiliario" },
+        { "emoji": "🚗", "name": "Automotriz" },
+        { "emoji": "🛒", "name": "Retail" },
+        { "emoji": "💼", "name": "Servicios Profesionales" },
+        { "emoji": "🏭", "name": "Industrial" },
+        { "emoji": "📱", "name": "Tecnología" },
+        { "emoji": "👤", "name": "Personas Físicas" }
+      ]
+    },
+    "relatedServices": [
+      {
+        "slug": "asesoria-consultoria",
+        "title": "Asesoría y Consultoría",
+        "description": "Estrategias legales integrales"
+      },
+      {
+        "slug": "derecho-administrativo",
+        "title": "Derecho Administrativo",
+        "description": "Litigio ante tribunales"
+      },
+      {
+        "slug": "derecho-civil-mercantil",
+        "title": "Derecho Civil y Mercantil",
+        "description": "Resolución de conflictos"
+      }
+    ]
+  },
+  "en": {
+    "seo": {
+      "title": "Tax Law - Specialized Tax Advisory | Pazos Chávez",
+      "description": "Comprehensive tax analysis, fiscal planning, and representation before SAT and Administrative Justice Court. Expert tax attorneys with 40+ years of experience.",
+      "keywords": [
+        "tax law",
+        "tax advisory",
+        "SAT",
+        "fiscal planning",
+        "tax disputes",
+        "tax attorneys Mexico City"
+      ]
+    },
+    "hero": {
+      "badge": "Legal Services",
+      "title": "Tax Law",
+      "subtitle": "Comprehensive tax analysis and expert representation before fiscal authorities"
+    },
+    "overview": {
+      "heading": "Strategic Tax Solutions",
+      "paragraphs": [
+        "The tax realm represents one of the most complex and critical aspects for any individual or entity. With over 40 years of experience, our team of tax attorneys offers comprehensive advisory ranging from preventive fiscal planning to defense in disputes before authorities.",
+        "We specialize in deep analysis of our clients' tax situation, identifying legitimate optimization opportunities and designing strategies that ensure compliance with obligations while maximizing tax efficiency."
+      ]
+    },
+    "services": {
+      "title": "Specialized Tax Services",
+      "items": [
+        {
+          "icon": "chart-bar",
+          "title": "Strategic Tax Planning",
+          "description": "Design of legal tax strategies that optimize tax burden, considering the specific nature of your activity and corporate structure."
+        },
+        {
+          "icon": "document-search",
+          "title": "Tax Audits",
+          "description": "Preventive review of tax obligation compliance and preparation to face reviews by tax authorities."
+        },
+        {
+          "icon": "scale",
+          "title": "SAT Disputes",
+          "description": "Legal representation in appeals, administrative procedures, and defense against requirements, fines, and tax credits."
+        },
+        {
+          "icon": "briefcase",
+          "title": "Tax Litigation",
+          "description": "Specialized defense before the Federal Court of Administrative Justice in nullity trials and contentious administrative proceedings."
+        },
+        {
+          "icon": "document-text",
+          "title": "Tax Reports",
+          "description": "Preparation and review of tax reports by authorized public accountant, ensuring compliance with legal requirements."
+        },
+        {
+          "icon": "shield",
+          "title": "Tax Compliance",
+          "description": "Implementation of preventive tax compliance systems and policies, reducing risks of tax contingencies."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Advantages of Our Tax Service",
+      "stats": [
+        {
+          "value": "95%",
+          "label": "Successful Cases",
+          "description": "High success rate in tax disputes and litigation"
+        },
+        {
+          "value": "40+",
+          "label": "Years of Experience",
+          "description": "Deep knowledge of the Mexican tax system"
+        },
+        {
+          "value": "24h",
+          "label": "Quick Response",
+          "description": "Immediate attention to urgent SAT requirements"
+        }
+      ]
+    },
+    "industries": {
+      "title": "Industry Specialization",
+      "items": [
+        { "emoji": "🏢", "name": "Corporate" },
+        { "emoji": "🏗️", "name": "Real Estate" },
+        { "emoji": "🚗", "name": "Automotive" },
+        { "emoji": "🛒", "name": "Retail" },
+        { "emoji": "💼", "name": "Professional Services" },
+        { "emoji": "🏭", "name": "Industrial" },
+        { "emoji": "📱", "name": "Technology" },
+        { "emoji": "👤", "name": "Individuals" }
+      ]
+    },
+    "relatedServices": [
+      {
+        "slug": "legal-advisory-consulting",
+        "title": "Legal Advisory",
+        "description": "Comprehensive legal strategies"
+      },
+      {
+        "slug": "administrative-law",
+        "title": "Administrative Law",
+        "description": "Court litigation"
+      },
+      {
+        "slug": "civil-commercial-law",
+        "title": "Civil & Commercial Law",
+        "description": "Conflict resolution"
+      }
+    ]
+  }
+}

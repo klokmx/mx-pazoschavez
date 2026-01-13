@@ -1,0 +1,147 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const navItems = [
+  { key: "nav.home", href: `/${lang === "en" ? "en" : ""}` },
+  { key: "nav.services.legal", href: `#servicios-legales` },
+  { key: "nav.services.contact", href: `#centro-contacto` },
+  { key: "nav.contact", href: `#contacto` },
+];
+---
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-content">
+      <!-- Logo -->
+      <a href={`/${lang === "en" ? "en" : ""}`} class="flex items-center">
+        <img
+          src="/images/LogoColor.svg"
+          alt="Bufete Jurídico Pazos Chávez"
+          class="h-12"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {
+          navItems.map((item) => (
+            <a href={item.href} class="navbar-link">
+              {t(item.key as any)}
+            </a>
+          ))
+        }
+
+        <!-- Language Switcher -->
+        <div class="flex items-center space-x-2 ml-4">
+          <a
+            href="/"
+            class={lang === "es" ? "lang-btn-active" : "lang-btn-inactive"}
+          >
+            ES
+          </a>
+          <a
+            href="/en"
+            class={lang === "en" ? "lang-btn-active" : "lang-btn-inactive"}
+          >
+            EN
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-gray-700 hover:text-main-blue-500 focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col space-y-3">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class="text-gray-700 hover:text-main-blue-500 transition-colors py-2"
+            >
+              {t(item.key as any)}
+            </a>
+          ))
+        }
+        <div class="flex space-x-2 pt-2">
+          <a
+            href="/"
+            class={`px-4 py-2 rounded-md transition-colors ${lang === "es" ? "bg-main-blue-500 text-white" : "text-gray-600 hover:bg-gray-100"}`}
+          >
+            ES
+          </a>
+          <a
+            href="/en"
+            class={`px-4 py-2 rounded-md transition-colors ${lang === "en" ? "bg-main-blue-500 text-white" : "text-gray-600 hover:bg-gray-100"}`}
+          >
+            EN
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  // Navbar scroll effect
+  let lastScroll = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+      navbar?.classList.add("shadow-lg");
+    } else {
+      navbar?.classList.remove("shadow-lg");
+    }
+
+    lastScroll = currentScroll;
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href") || "");
+      if (target) {
+        const offsetTop = (target as HTMLElement).offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+        // Close mobile menu after click
+        mobileMenu?.classList.add("hidden");
+      }
+    });
+  });
+</script>

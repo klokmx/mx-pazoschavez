@@ -1,16 +1,24 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import LegalServices from "../components/LegalServices.astro";
+import ContactCenter from "../components/ContactCenter.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Bufete Jurídico Pazos Chávez - Servicios Legales y Centro de Contacto"
+  description="Firma boutique de abogados con más de 35 años ofreciendo servicios de asesoría legal integral de la más alta calidad y servicios de centro de contacto modernos."
+  lang="es"
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <LegalServices />
+    <ContactCenter />
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout>

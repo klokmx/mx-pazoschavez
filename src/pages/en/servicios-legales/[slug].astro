@@ -1,0 +1,26 @@
+---
+import { legalServices } from "../../../data/legalServices";
+import ServiceDetailPage from "../../../components/ServiceDetailPage.astro";
+
+export async function getStaticPaths() {
+  return legalServices.map((service) => ({
+    params: { slug: service.id },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+// Get 3 random related services (excluding current one)
+const relatedServices = legalServices
+  .filter((s) => s.id !== service.id)
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
+---
+
+<ServiceDetailPage
+  service={service}
+  relatedServices={relatedServices}
+  lang="en"
+  category="legal"
+/>
