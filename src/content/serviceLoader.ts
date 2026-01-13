@@ -62,12 +62,13 @@ interface ServiceData {
 const serviceFiles = {
   'asesoria-consultoria': () => import('./legal-services/asesoria-consultoria.json'),
   'derecho-fiscal': () => import('./legal-services/derecho-fiscal.json'),
-  'derecho-civil-mercantil': () => import('./legal-services/derecho-civil-mercantil.json'),
-  'derecho-familiar': () => import('./legal-services/derecho-familiar.json'),
-  'derecho-administrativo': () => import('./legal-services/derecho-administrativo.json'),
-  'expropiacion': () => import('./legal-services/expropiacion.json'),
-  'patentes-marcas': () => import('./legal-services/patentes-marcas.json'),
-  'cobranza': () => import('./legal-services/cobranza.json'),
+  // TODO: Add remaining services as JSON files are created:
+  // 'derecho-civil-mercantil': () => import('./legal-services/derecho-civil-mercantil.json'),
+  // 'derecho-familiar': () => import('./legal-services/derecho-familiar.json'),
+  // 'derecho-administrativo': () => import('./legal-services/derecho-administrativo.json'),
+  // 'expropiacion': () => import('./legal-services/expropiacion.json'),
+  // 'patentes-marcas': () => import('./legal-services/patentes-marcas.json'),
+  // 'cobranza': () => import('./legal-services/cobranza.json'),
 };
 
 // Obtener servicio por slug y idioma

@@ -1,6 +1,6 @@
 ---
 import { contactCenterServices } from "../../../data/contactCenterServices";
-import ServiceDetailPage from "../../../components/ServiceDetailPage.astro";
+import ContactCenterDetailPage from "../../../components/ContactCenterDetailPage.astro";
 
 export async function getStaticPaths() {
   return contactCenterServices.map((service) => ({
@@ -18,9 +18,8 @@ const relatedServices = contactCenterServices
   .slice(0, 3);
 ---
 
-<ServiceDetailPage
+<ContactCenterDetailPage
   service={service}
   relatedServices={relatedServices}
   lang="en"
-  category="contact-center"
 />
