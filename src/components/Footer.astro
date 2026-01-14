@@ -7,10 +7,10 @@ const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
 
 const legalLinks = [
-  { key: "footer.privacy", href: "/privacidad" },
-  { key: "footer.security", href: "/seguridad" },
-  { key: "footer.antibribery", href: "/antisoborno" },
-  { key: "footer.complaints", href: "/quejas" },
+  { key: "footer.privacy", href: "privacidad" },
+  { key: "footer.security", href: "seguridad" },
+  { key: "footer.antibribery", href: "antisoborno" },
+  { key: "footer.complaints", href: "quejas" },
 ];
 ---
 
@@ -161,7 +161,9 @@ const legalLinks = [
           {
             legalLinks.map((link) => (
               <a
-                href={link.href}
+                href={Astro.url.pathname.startsWith('/en/') || Astro.url.pathname === '/en' 
+                  ? `${import.meta.env.BASE_URL}en/${link.href}`
+                  : `${import.meta.env.BASE_URL}${link.href}`}
                 class="text-gray-400 hover:text-blue-400 transition-colors duration-200"
               >
                 {t(link.key as any)}
