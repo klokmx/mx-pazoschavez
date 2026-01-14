@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 // Use base path only in production
-const base = process.env.NODE_ENV === "production" ? "/mx-pazoschavez" : "/";
+const base = process.env.NODE_ENV === "production" ? "/mx-pazoschavez/" : "/";
 
 export default defineConfig({
   site:
