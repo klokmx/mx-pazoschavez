@@ -16,12 +16,16 @@ const navItems = [
 
 // Get current page path without language prefix or base URL for language switching
 const pathname = Astro.url.pathname;
-const pathWithoutBase = pathname.replace(import.meta.env.BASE_URL, '/');
-const pathWithoutLang = pathWithoutBase.replace(/^\/(en\/)?/, '');
+const pathWithoutBase = pathname.replace(import.meta.env.BASE_URL, "/");
+const pathWithoutLang = pathWithoutBase.replace(/^\/(en\/)?/, "");
 
 // Build language switcher URLs
-const esUrl = pathWithoutLang ? `${import.meta.env.BASE_URL}${pathWithoutLang}` : import.meta.env.BASE_URL;
-const enUrl = pathWithoutLang ? `${import.meta.env.BASE_URL}en/${pathWithoutLang}` : `${import.meta.env.BASE_URL}en`;
+const esUrl = pathWithoutLang
+  ? `${import.meta.env.BASE_URL}${pathWithoutLang}`
+  : import.meta.env.BASE_URL;
+const enUrl = pathWithoutLang
+  ? `${import.meta.env.BASE_URL}en/${pathWithoutLang}`
+  : `${import.meta.env.BASE_URL}en`;
 ---
 
 <nav class="navbar" id="navbar">
@@ -43,22 +47,22 @@ const enUrl = pathWithoutLang ? `${import.meta.env.BASE_URL}en/${pathWithoutLang
       <div class="hidden md:flex items-center space-x-8">
         {
           navItems.map((item) => (
-            <a hreesUrl}
-            class={lang === "es" ? "lang-btn-active" : "lang-btn-inactive"}
-          >
-            ES
-          </a>
-          <a
-            href={enUrl
+            <a href={item.href} class="navbar-link">
+              {t(item.key as any)}
+            </a>
+          ))
+        }
+
+        <!-- Language Switcher -->
         <div class="flex items-center space-x-2 ml-4">
           <a
-            href={import.meta.env.BASE_URL}
+            href={esUrl}
             class={lang === "es" ? "lang-btn-active" : "lang-btn-inactive"}
           >
             ES
           </a>
           <a
-            href={import.meta.env.BASE_URL + "en"}
+            href={enUrl}
             class={lang === "en" ? "lang-btn-active" : "lang-btn-inactive"}
           >
             EN
