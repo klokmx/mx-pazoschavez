@@ -431,11 +431,6 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-
-    /* Background Image */
-    .bg-hero-image {
-        background-image: url('/images/homehero.png');
-    }
 }
 
 /* ========== CUSTOM SCROLLBAR ========== */

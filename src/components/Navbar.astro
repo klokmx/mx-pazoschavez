@@ -18,7 +18,7 @@ const navItems = [
       <!-- Logo -->
       <a href={`/${lang === "en" ? "en" : ""}`} class="flex items-center">
         <img
-          src="/images/LogoColor.svg"
+          src={import.meta.env.BASE_URL + "images/LogoColor.svg"}
           alt="Bufete Jurídico Pazos Chávez. México"
           class="h-12"
         />
@@ -37,13 +37,13 @@ const navItems = [
         <!-- Language Switcher -->
         <div class="flex items-center space-x-2 ml-4">
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             class={lang === "es" ? "lang-btn-active" : "lang-btn-inactive"}
           >
             ES
           </a>
           <a
-            href="/en"
+            href={import.meta.env.BASE_URL + "en"}
             class={lang === "en" ? "lang-btn-active" : "lang-btn-inactive"}
           >
             EN
@@ -86,13 +86,13 @@ const navItems = [
         }
         <div class="flex space-x-2 pt-2">
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             class={`px-4 py-2 rounded-md transition-colors ${lang === "es" ? "bg-main-blue-500 text-white" : "text-gray-600 hover:bg-gray-100"}`}
           >
             ES
           </a>
           <a
-            href="/en"
+            href={import.meta.env.BASE_URL + "en"}
             class={`px-4 py-2 rounded-md transition-colors ${lang === "en" ? "bg-main-blue-500 text-white" : "text-gray-600 hover:bg-gray-100"}`}
           >
             EN
