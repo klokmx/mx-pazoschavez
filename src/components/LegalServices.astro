@@ -47,8 +47,8 @@ const iconMap: Record<string, string> = {
           <a
             href={
               lang === "es"
-                ? `/servicios-legales/${service.id}`
-                : `/en/servicios-legales/${service.id}`
+                ? `${import.meta.env.BASE_URL}servicios-legales/${service.id}`
+                : `${import.meta.env.BASE_URL}en/servicios-legales/${service.id}`
             }
             class="card-standard"
           >

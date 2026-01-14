@@ -97,7 +97,7 @@ const imagePlaceholder = `https://placehold.co/1200x600/0A2240/FFFFFF/png?text=$
 
         <div class="text-center mt-12">
           <a
-            href={`/${lang === "en" ? "en/" : ""}#contacto`}
+            href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}#contacto`}
             class="cta-button"
           >
             {t.requestConsultation}
@@ -116,7 +116,7 @@ const imagePlaceholder = `https://placehold.co/1200x600/0A2240/FFFFFF/png?text=$
           <div class="grid-3-col">
             {relatedServices.map((related) => (
               <a
-                href={`/${lang === "en" ? "en/" : ""}${categoryPath}/${related.id}`}
+                href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}${categoryPath}/${related.id}`}
                 class="service-card"
               >
                 <div class="service-card-icon">
@@ -139,7 +139,7 @@ const imagePlaceholder = `https://placehold.co/1200x600/0A2240/FFFFFF/png?text=$
 
           <div class="text-center mt-12">
             <a
-              href={`/${lang === "en" ? "en/" : ""}#servicios`}
+              href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}#servicios`}
               class="link-arrow"
             >
               {t.viewAllServices}

@@ -5,7 +5,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const navItems = [
-  { key: "nav.home", href: `/${lang === "en" ? "en" : ""}` },
+  {
+    key: "nav.home",
+    href: `${import.meta.env.BASE_URL}${lang === "en" ? "en" : ""}`,
+  },
   { key: "nav.services.legal", href: `#servicios-legales` },
   { key: "nav.services.contact", href: `#centro-contacto` },
   { key: "nav.contact", href: `#contacto` },
@@ -16,7 +19,10 @@ const navItems = [
   <div class="navbar-inner">
     <div class="navbar-content">
       <!-- Logo -->
-      <a href={`/${lang === "en" ? "en" : ""}`} class="flex items-center">
+      <a
+        href={`${import.meta.env.BASE_URL}${lang === "en" ? "en" : ""}`}
+        class="flex items-center"
+      >
         <img
           src={import.meta.env.BASE_URL + "images/LogoColor.svg"}
           alt="Bufete Jurídico Pazos Chávez. México"
