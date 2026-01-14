@@ -161,9 +161,12 @@ const legalLinks = [
           {
             legalLinks.map((link) => (
               <a
-                href={Astro.url.pathname.startsWith('/en/') || Astro.url.pathname === '/en' 
-                  ? `${import.meta.env.BASE_URL}en/${link.href}`
-                  : `${import.meta.env.BASE_URL}${link.href}`}
+                href={
+                  Astro.url.pathname.startsWith("/en/") ||
+                  Astro.url.pathname === "/en"
+                    ? `${import.meta.env.BASE_URL}en/${link.href}`
+                    : `${import.meta.env.BASE_URL}${link.href}`
+                }
                 class="text-gray-400 hover:text-blue-400 transition-colors duration-200"
               >
                 {t(link.key as any)}
