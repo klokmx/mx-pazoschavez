@@ -148,6 +148,42 @@ export const ui = {
     'footer.antibribery': 'Política Antisoborno',
     'footer.complaints': 'Quejas',
     'footer.desc': 'Firma boutique de abogados con más de 40 años ofreciendo servicios de asesoría legal integral y centro de contacto moderno.',
+    
+    // Privacy Policy Page
+    'privacy.title': 'Aviso de Privacidad',
+    'privacy.subtitle': 'Ley Federal de Protección de Datos Personales en Posesión de los Particulares',
+    'privacy.commitment.title': 'Nuestro Compromiso',
+    'privacy.responsible.title': 'Responsable del Tratamiento de Datos',
+    'privacy.data.title': 'Datos Personales que Recabamos',
+    'privacy.rights.title': 'Sus Derechos ARCO',
+    'privacy.transfer.title': 'Transferencia de Datos',
+    'privacy.security.title': 'Medidas de Seguridad',
+    'privacy.changes.title': 'Cambios al Aviso de Privacidad',
+    'privacy.consent.title': 'Consentimiento',
+    
+    // Security Policy Page
+    'security.title': 'Seguridad de la Información',
+    'security.subtitle': 'Políticas de Seguridad de la Información',
+    'security.policy.title': 'Política de Seguridad de la Información',
+    'security.providers.title': 'Políticas para Proveedores y Visitantes',
+    'security.access.title': 'Control de Acceso',
+    'security.offices.title': 'Seguridad en Oficinas',
+    'security.mobile.title': 'Política de Dispositivos de Comunicación Móvil',
+    'security.storage.title': 'Política de Dispositivos de Almacenamiento',
+    'security.internet.title': 'Política de Acceso a Internet',
+    
+    // Anti-Bribery Policy Page
+    'antibribery.title': 'Política Antisoborno',
+    'antibribery.subtitle': 'Compromiso con la Ética y el Cumplimiento Legal',
+    'antibribery.applicability.title': 'Aplicabilidad',
+    'antibribery.policy.title': 'Política Antisoborno',
+    'antibribery.responsibility.title': 'Responsabilidad y Autoridad',
+    'antibribery.consequences.title': 'Consecuencias del Incumplimiento',
+    'antibribery.commitment.title': 'Nuestro Compromiso',
+    
+    // Complaints Page
+    'complaints.title': 'Quejas y Sugerencias',
+    'complaints.subtitle': 'Canal de Comunicación con Nuestros Clientes',
   },
   en: {
     // Navigation
@@ -291,6 +327,42 @@ export const ui = {
     'footer.antibribery': 'Anti-Bribery Policy',
     'footer.complaints': 'Complaints',
     'footer.desc': 'Boutique law firm with over 40 years providing comprehensive legal advisory services and modern contact center.',
+    
+    // Privacy Policy Page
+    'privacy.title': 'Privacy Notice',
+    'privacy.subtitle': 'Federal Law on Protection of Personal Data Held by Private Parties',
+    'privacy.commitment.title': 'Our Commitment',
+    'privacy.responsible.title': 'Data Controller',
+    'privacy.data.title': 'Personal Data We Collect',
+    'privacy.rights.title': 'Your ARCO Rights',
+    'privacy.transfer.title': 'Data Transfer',
+    'privacy.security.title': 'Security Measures',
+    'privacy.changes.title': 'Changes to Privacy Notice',
+    'privacy.consent.title': 'Consent',
+    
+    // Security Policy Page
+    'security.title': 'Information Security',
+    'security.subtitle': 'Information Security Policies',
+    'security.policy.title': 'Information Security Policy',
+    'security.providers.title': 'Policies for Suppliers and Visitors',
+    'security.access.title': 'Access Control',
+    'security.offices.title': 'Office Security',
+    'security.mobile.title': 'Mobile Communication Devices Policy',
+    'security.storage.title': 'Storage Devices Policy',
+    'security.internet.title': 'Internet Access Policy',
+    
+    // Anti-Bribery Policy Page
+    'antibribery.title': 'Anti-Bribery Policy',
+    'antibribery.subtitle': 'Commitment to Ethics and Legal Compliance',
+    'antibribery.applicability.title': 'Applicability',
+    'antibribery.policy.title': 'Anti-Bribery Policy',
+    'antibribery.responsibility.title': 'Responsibility and Authority',
+    'antibribery.consequences.title': 'Consequences of Non-Compliance',
+    'antibribery.commitment.title': 'Our Commitment',
+    
+    // Complaints Page
+    'complaints.title': 'Complaints and Suggestions',
+    'complaints.subtitle': 'Communication Channel with Our Clients',
   },
 } as const;
 

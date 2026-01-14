@@ -1,0 +1,466 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { useTranslations } from "../../i18n";
+
+const t = useTranslations("en");
+---
+
+<Layout
+  title="Information Security - Bufete Jurídico Pazos Chávez"
+  description="Information Security Policies of Bufete Jurídico Pazos Chávez S.C."
+  lang="en"
+>
+  <Navbar />
+  <main
+    class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
+  >
+    <div class="container mx-auto px-4 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+          <a
+            href="/en"
+            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-6"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+          </a>
+          <h1
+            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+          >
+            {t("security.title")}
+          </h1>
+          <p class="text-xl text-gray-400">
+            {t("security.subtitle")}
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700"
+        >
+          <div class="prose prose-invert prose-lg max-w-none">
+            <div class="text-gray-300 space-y-8 leading-relaxed">
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.policy.title")}
+                </h2>
+                <div class="bg-gray-700/30 p-6 rounded-lg mb-4">
+                  <p class="text-gray-300 mb-4">
+                    We are an organization dedicated to providing Contact Center
+                    Services for Credit Portfolio Administration and Recovery in
+                    Extrajudicial and Judicial Form, Notifications, as well as
+                    Customer Service.
+                  </p>
+                  <p class="text-gray-300">
+                    We are committed to comply and exceed the requirements
+                    applicable to the security of information systems and to
+                    guarantee their <strong
+                      >confidentiality, integrity and availability</strong
+                    > through continuous improvement of processes and assets, compliance
+                    with information security objectives and adhering to applicable
+                    legal regulations.
+                  </p>
+                </div>
+                <p class="text-sm text-gray-400 italic">V-2 January 2021</p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.providers.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  <strong>Dear Provider or Visitor:</strong>
+                </p>
+                <p class="text-gray-300 mb-4">
+                  In order to access and remain in our facilities you must read
+                  and apply the following information security policies:
+                </p>
+
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-blue-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      Register your entry at the building or parking access
+                      module, as well as with the Police Officer and at
+                      Reception, fully identifying yourself and wearing your
+                      badge in a visible place at all times.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-blue-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      If you bring computer equipment, you must declare and
+                      register it upon entry. Computer equipment can only be
+                      used in reception areas and meeting rooms, being strictly
+                      prohibited to enter it into secure areas (operation,
+                      administration or site facilities) except with Management
+                      permission.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-blue-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      The use of cell phones, smartwatches or tablets is only
+                      allowed in the reception area and meeting and training
+                      rooms. Their use within secure areas is at the discretion
+                      of the accompanying staff.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-red-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      <strong>It is prohibited</strong> for providers or third parties
+                      to access restricted sites or areas for which they have not
+                      been authorized, or to wander through hallways or stairs.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-red-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      <strong>It is prohibited</strong> to take photographs or video
+                      recordings in any area of the company.
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-red-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      Removable storage devices (USB, MICRO SD, external HDD,
+                      among others) <strong>are prohibited</strong> within secure
+                      areas (Operation, administrative and site areas).
+                    </p>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <div
+                      class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center mt-1"
+                    >
+                      <svg
+                        class="w-4 h-4 text-red-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 flex-1">
+                      <strong>It is strictly prohibited</strong> to enter the facilities
+                      under the influence of drugs, narcotics or alcoholic beverages,
+                      as well as smoking within the facilities.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-6 mt-6"
+                >
+                  <h3 class="text-xl font-semibold text-yellow-400 mb-3">
+                    Consequences of Non-Compliance
+                  </h3>
+                  <p class="text-gray-300">
+                    In case any third party or supplier fails to comply or
+                    flagrantly violates any of these provisions, they will be
+                    asked to leave the facilities immediately and additionally
+                    be potentially subject to legal sanctions.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.access.title")}
+                </h2>
+
+                <h3 class="text-xl font-semibold text-gray-200 mb-3">
+                  Vehicle Entry
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  All employee vehicles must be registered when entering and
+                  leaving the parking lot. Registration will be done through the
+                  magnetic card provided for this purpose by the security area
+                  upon prior authorization from management.
+                </p>
+                <p class="text-gray-300 mb-6">
+                  All visitor vehicles requiring access to company facilities
+                  must be registered and inspected in advance by security
+                  personnel to prevent the entry of equipment and dangerous
+                  objects that pose risks to personnel or company property.
+                </p>
+
+                <h3 class="text-xl font-semibold text-gray-200 mb-3">
+                  Exit Inspection
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Personnel exit from facilities must be controlled through the
+                  following measures:
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-6"
+                >
+                  <li>
+                    Employees must register their exit through their
+                    identification badge
+                  </li>
+                  <li>
+                    External personnel or visitors must show their visitor badge
+                    and register their exit
+                  </li>
+                  <li>
+                    Security personnel must ensure that no person removes
+                    furniture, computer/electronic equipment, work tools or
+                    documents without formal authorization from the responsible
+                    area
+                  </li>
+                  <li>
+                    Security personnel may conduct an inspection of briefcases,
+                    bags and bundles leaving the facilities
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.offices.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  All offices and facilities of Bufete Jurídico Pazos Chávez
+                  must comply with the following controls:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                  <li>Offices must avoid access to the general public</li>
+                  <li>
+                    Departmental photocopying, printing or fax equipment should
+                    preferably be within secure areas and under the supervision
+                    of authorized personnel
+                  </li>
+                  <li>
+                    Doors and windows must remain closed in the absence of
+                    personnel working in the offices
+                  </li>
+                  <li>
+                    The use of photographic, video or audio recording equipment
+                    is not allowed unless there is express authorization from
+                    Management
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.mobile.title")}
+                </h2>
+                <div
+                  class="bg-red-900/20 border border-red-600/30 rounded-lg p-6 mb-4"
+                >
+                  <p class="text-gray-300 mb-4">
+                    <strong>It is strictly prohibited</strong> for personnel working
+                    within the facilities of Bufete Jurídico Pazos Chávez S.C. to
+                    bring cell phones, tablets, laptops or any other radio communication
+                    device. Personnel are required to leave such devices in their
+                    assigned locker in the dining area before entering to perform
+                    their duties.
+                  </p>
+                  <p class="text-gray-300">
+                    In the event that operational personnel are caught bringing
+                    their cell phone into the facilities, security personnel
+                    will confiscate it and keep it in custody until the
+                    employee's departure time. This act will be notified to the
+                    immediate supervisor of the person involved who will
+                    initiate the applicable administrative sanction process.
+                  </p>
+                </div>
+
+                <p class="text-gray-300 mb-4">
+                  Personnel performing duties outside the facilities will
+                  receive communication equipment from the company, obligating
+                  the personnel to sign the letter of responsibility for the use
+                  and custody of the entrusted equipment.
+                </p>
+
+                <p class="text-gray-300">
+                  Persons identified as visitors may bring their mobile
+                  communication equipment upon registration with security
+                  personnel.
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.storage.title")}
+                </h2>
+                <div
+                  class="bg-red-900/20 border border-red-600/30 rounded-lg p-6"
+                >
+                  <p class="text-gray-300 mb-4">
+                    <strong>The use of</strong> any removable information storage
+                    device is <strong>prohibited</strong>, such as Flash drives,
+                    Portable hard drives, memory cards, zip drives, etc.
+                  </p>
+                  <p class="text-gray-300 mb-4">
+                    The Systems Management is required to implement physical and
+                    technological control means to ensure the non-operation of
+                    removable storage devices in computers assigned to
+                    unauthorized operational and administrative personnel.
+                  </p>
+                  <p class="text-gray-300">
+                    The Systems area and Company Management are authorized
+                    personnel for the use of these devices, committing to
+                    compliance with confidentiality and non-disclosure
+                    regulations applicable by the information owner.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("security.internet.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  Internet use privileges will be limited by the access need
+                  required by the development of each user's function.
+                </p>
+                <p class="text-gray-300 mb-4">
+                  Requests for new user codes and changes to access privileges
+                  will be presented in writing with the approval of the head of
+                  the area to which the user belongs and company management.
+                </p>
+                <p class="text-gray-300">
+                  For users registered as visitors who require internet service,
+                  this service will be provided upon prior authorization from
+                  Systems Management. In no case will access be granted through
+                  the corporate network, providing the service through
+                  independent ADSL equipment.
+                </p>
+              </section>
+
+              <div class="mt-8 pt-8 border-t border-gray-700">
+                <p class="text-sm text-gray-400 italic">
+                  Last updated: January 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>

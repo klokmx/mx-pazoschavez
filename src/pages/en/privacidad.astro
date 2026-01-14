@@ -1,0 +1,246 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { useTranslations } from "../../i18n";
+
+const t = useTranslations("en");
+---
+
+<Layout
+  title="Privacy Notice - Bufete Jurídico Pazos Chávez"
+  description="Privacy Notice in accordance with the Federal Law on Protection of Personal Data Held by Private Parties"
+  lang="en"
+>
+  <Navbar />
+  <main
+    class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
+  >
+    <div class="container mx-auto px-4 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+          <a
+            href="/en"
+            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-6"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+          </a>
+          <h1
+            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+          >
+            {t("privacy.title")}
+          </h1>
+          <p class="text-xl text-gray-400">
+            {t("privacy.subtitle")}
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700"
+        >
+          <div class="prose prose-invert prose-lg max-w-none">
+            <div class="text-gray-300 space-y-6 leading-relaxed">
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.commitment.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  At <strong>Bufete Jurídico Pazos Chávez S.C.</strong>, we are
+                  committed to complying with the treatment of personal data as
+                  Controllers (for Human Resources and Purchasing processes) in
+                  accordance with the purposes agreed upon with the data
+                  subjects through the Privacy Notice, or as Processors (for
+                  Customer Service, Notifications, Extrajudicial and Judicial
+                  Collection processes) with the Controllers with whom we have
+                  established a Contract.
+                </p>
+                <p class="text-gray-300">
+                  We commit to carry out the actions, policies, practices and
+                  procedures in order to comply with all the Principles, Duties
+                  and Obligations established in the Federal Law on Protection
+                  of Personal Data Held by Private Parties (LFPDPPP), its
+                  Regulations and applicable regulations, through the
+                  development, implementation, maintenance and improvement of
+                  our Personal Data Security Management System and the
+                  implementation of a Personal Data Protection culture.
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.responsible.title")}
+                </h2>
+                <div class="bg-gray-700/30 p-6 rounded-lg">
+                  <p class="text-gray-300 mb-2">
+                    <strong>Controller:</strong> Bufete Jurídico Pazos Chávez S.C.
+                  </p>
+                  <p class="text-gray-300 mb-2">
+                    <strong>Address:</strong> Av. Insurgentes Sur #3155, 2nd Floor,
+                    Col. Jardines del Pedregal Cuicuilco, Del. Coyoacán, C.P. 04510,
+                    Mexico City
+                  </p>
+                  <p class="text-gray-300 mb-2">
+                    <strong>Phone:</strong> 55 4445 3040
+                  </p>
+                  <p class="text-gray-300">
+                    <strong>Email:</strong> contacto@pazoschavez.mx
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.data.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  The personal data we collect from you will be used for the
+                  following purposes that are necessary for the service you
+                  request:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                  <li>Provision of legal and contact center services</li>
+                  <li>Contact and follow-up on legal matters</li>
+                  <li>Credit portfolio administration and recovery</li>
+                  <li>Notifications and customer service</li>
+                  <li>
+                    Human resources management (in case of job application)
+                  </li>
+                  <li>Supplier administration</li>
+                  <li>Compliance with legal and tax obligations</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.rights.title")}
+                </h2>
+                <p class="text-gray-300 mb-4">
+                  You have the right to know what personal data we have about
+                  you, what we use it for and the conditions of use we give it
+                  (Access). Likewise, it is your right to request the correction
+                  of your personal information in case it is outdated,
+                  inaccurate or incomplete (Rectification); that we delete it
+                  from our records or databases when you consider that it is not
+                  being used appropriately (Cancellation); as well as to oppose
+                  the use of your personal data for specific purposes
+                  (Opposition). These rights are known as ARCO rights.
+                </p>
+                <p class="text-gray-300">
+                  To exercise any of the ARCO rights, you must submit the
+                  respective request through email: <a
+                    href="mailto:contacto@pazoschavez.mx"
+                    class="text-blue-400 hover:text-blue-300"
+                    >contacto@pazoschavez.mx</a
+                  >
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.transfer.title")}
+                </h2>
+                <p class="text-gray-300">
+                  We inform you that your personal data may be shared within the
+                  country with the following persons, companies, organizations
+                  or authorities other than us, for the following purposes:
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-2 text-gray-300 ml-4 mt-4"
+                >
+                  <li>Competent authorities when required by law</li>
+                  <li>Clients for whom we provide services as processors</li>
+                  <li>Technology and support service providers</li>
+                </ul>
+                <p class="text-gray-300 mt-4">
+                  These transfers are made only when necessary for the
+                  fulfillment of our services and always under strict
+                  confidentiality and security measures.
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.security.title")}
+                </h2>
+                <p class="text-gray-300">
+                  Bufete Jurídico Pazos Chávez S.C. has administrative,
+                  technical and physical security measures to protect your
+                  personal data, which we equally require to be complied with by
+                  the service providers we hire. We have ISO 9001-2015
+                  certification and comply with the highest information security
+                  standards.
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.changes.title")}
+                </h2>
+                <p class="text-gray-300">
+                  This privacy notice may undergo modifications, changes or
+                  updates arising from new legal requirements; from our own
+                  needs for the products or services we offer; from our privacy
+                  practices; from changes in our business model, or for other
+                  reasons.
+                </p>
+                <p class="text-gray-300 mt-4">
+                  We commit to keep you informed about the changes that this
+                  privacy notice may undergo, through our website: <a
+                    href="https://pazoschavez.mx"
+                    class="text-blue-400 hover:text-blue-300">pazoschavez.mx</a
+                  >
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("privacy.consent.title")}
+                </h2>
+                <p class="text-gray-300">
+                  If you do not express your opposition to the transfer of your
+                  personal data, it will be understood that you have given your
+                  consent for it.
+                </p>
+              </section>
+
+              <div class="mt-8 pt-8 border-t border-gray-700">
+                <p class="text-sm text-gray-400 italic">
+                  Last updated: January 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>

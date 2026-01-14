@@ -1,0 +1,492 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { useTranslations } from "../../i18n";
+
+const t = useTranslations("en");
+---
+
+<Layout
+  title="Anti-Bribery Policy - Bufete Jurídico Pazos Chávez"
+  description="Anti-Bribery Policy of Bufete Jurídico Pazos Chávez S.C. - Commitment to ethics and legal compliance"
+  lang="en"
+>
+  <Navbar />
+  <main
+    class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
+  >
+    <div class="container mx-auto px-4 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+          <a
+            href="/en"
+            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-6"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+          </a>
+          <h1
+            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+          >
+            {t("antibribery.title")}
+          </h1>
+          <p class="text-xl text-gray-400">
+            {t("antibribery.subtitle")}
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700"
+        >
+          <div class="prose prose-invert prose-lg max-w-none">
+            <div class="text-gray-300 space-y-8 leading-relaxed">
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("antibribery.applicability.title")}
+                </h2>
+                <div
+                  class="bg-blue-900/20 border border-blue-600/30 rounded-lg p-6"
+                >
+                  <p class="text-gray-300">
+                    This Policy applies to <strong>all personnel</strong> of the organization
+                    (executives, middle management and administrative and operational
+                    staff), as well as critical business partners acting on behalf
+                    of or representing Bufete Jurídico Pazos Chávez S.C.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("antibribery.policy.title")}
+                </h2>
+                <div class="bg-gray-700/30 p-6 rounded-lg space-y-4">
+                  <p class="text-gray-300">
+                    At <strong>Bufete Jurídico Pazos Chávez S.C.</strong> we focus
+                    on providing Contact Center services for Credit Portfolio Administration
+                    and Recovery in Extrajudicial and Judicial Form, Notifications,
+                    as well as Customer Service.
+                  </p>
+
+                  <div class="grid md:grid-cols-2 gap-4 my-6">
+                    <div
+                      class="bg-gray-800/50 p-4 rounded-lg border border-gray-600"
+                    >
+                      <div class="flex items-center space-x-3 mb-2">
+                        <div
+                          class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-blue-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-blue-400">
+                          Legal & Ethical Conduct
+                        </h3>
+                      </div>
+                      <p class="text-gray-300 text-sm">
+                        We commit to legal and ethical conduct in all our
+                        operations.
+                      </p>
+                    </div>
+
+                    <div
+                      class="bg-gray-800/50 p-4 rounded-lg border border-gray-600"
+                    >
+                      <div class="flex items-center space-x-3 mb-2">
+                        <div
+                          class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-red-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-red-400">
+                          Zero Bribery
+                        </h3>
+                      </div>
+                      <p class="text-gray-300 text-sm">
+                        Bribery is strictly prohibited in all its forms.
+                      </p>
+                    </div>
+
+                    <div
+                      class="bg-gray-800/50 p-4 rounded-lg border border-gray-600"
+                    >
+                      <div class="flex items-center space-x-3 mb-2">
+                        <div
+                          class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-green-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-green-400">
+                          Monitoring & Compliance
+                        </h3>
+                      </div>
+                      <p class="text-gray-300 text-sm">
+                        We continuously monitor compliance with anti-bribery
+                        regulations.
+                      </p>
+                    </div>
+
+                    <div
+                      class="bg-gray-800/50 p-4 rounded-lg border border-gray-600"
+                    >
+                      <div class="flex items-center space-x-3 mb-2">
+                        <div
+                          class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"
+                        >
+                          <svg
+                            class="w-6 h-6 text-purple-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-purple-400">
+                          Professional Integrity
+                        </h3>
+                      </div>
+                      <p class="text-gray-300 text-sm">
+                        We act with professionalism, fairness and integrity in
+                        all our relationships.
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="text-gray-300">
+                    We carry out measures to ensure that personnel and critical
+                    business partners are fully informed about applicable legal
+                    regulations and monitor them to ensure full compliance with
+                    anti-bribery law.
+                  </p>
+
+                  <p class="text-gray-300">
+                    At all times we will act professionally, fairly and with the
+                    highest possible integrity in all business negotiations and
+                    relationships. This will apply everywhere we operate.
+                  </p>
+
+                  <p class="text-gray-300">
+                    We are oriented to channel in good faith the concerns raised
+                    by personnel or critical business partners, to comply with
+                    the requirements of the Anti-Bribery Management System and
+                    its objectives, as well as to continuously improve it.
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("antibribery.responsibility.title")}
+                </h2>
+
+                <div class="space-y-4">
+                  <div class="bg-gray-700/30 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-200 mb-3">
+                      Responsibility of Executives and Middle Management
+                    </h3>
+                    <p class="text-gray-300">
+                      It is the responsibility of Executives, department heads
+                      or managers, coordinators, supervisors and middle
+                      management to <strong
+                        >ensure that this Policy is complied with and applied
+                        among their personnel</strong
+                      >.
+                    </p>
+                  </div>
+
+                  <div class="bg-gray-700/30 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-200 mb-3">
+                      Responsibility of Each Employee
+                    </h3>
+                    <p class="text-gray-300">
+                      It is the responsibility of each employee of the
+                      organization to <strong>comply with this Policy</strong> and
+                      to conduct themselves ethically and with integrity in the activities
+                      and responsibilities that, according to their authority, they
+                      carry out.
+                    </p>
+                  </div>
+
+                  <div
+                    class="bg-blue-900/20 border border-blue-600/30 rounded-lg p-6"
+                  >
+                    <h3 class="text-lg font-semibold text-blue-400 mb-3">
+                      Anti-Bribery Compliance Function
+                    </h3>
+                    <p class="text-gray-300 mb-3">
+                      The Management of Bufete Jurídico Pazos Chávez S.C.
+                      appoints the <strong
+                        >Regulatory Management Coordinator</strong
+                      > to cover the Anti-Bribery Compliance Function and grants them
+                      the widest powers and independence to carry out:
+                    </p>
+                    <ul
+                      class="list-disc list-inside space-y-2 text-gray-300 ml-4"
+                    >
+                      <li>Necessary actions and investigations</li>
+                      <li>Due diligence</li>
+                      <li>Training and awareness programs</li>
+                      <li>Monitoring and control activities</li>
+                      <li>
+                        Application of sanctions and compliance mechanisms
+                      </li>
+                    </ul>
+                    <p class="text-gray-300 mt-4">
+                      The Coordinator has the authority to communicate and
+                      establish internal sanctions in case of non-compliance,
+                      independent of the legal sanctions to which any employee
+                      or third party of the organization may be subject.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("antibribery.consequences.title")}
+                </h2>
+
+                <div
+                  class="bg-red-900/20 border border-red-600/30 rounded-lg p-6"
+                >
+                  <div class="flex items-start space-x-4 mb-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-7 h-7 text-red-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="text-xl font-semibold text-red-400 mb-3">
+                        Consequences of Non-Compliance
+                      </h3>
+                      <p class="text-gray-300 mb-4">
+                        The consequences of not complying with the Anti-Bribery
+                        Policy are determined in:
+                      </p>
+                      <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start space-x-2">
+                          <svg
+                            class="w-5 h-5 mt-0.5 text-red-400 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                          <span
+                            ><strong>Confidentiality agreements</strong></span
+                          >
+                        </li>
+                        <li class="flex items-start space-x-2">
+                          <svg
+                            class="w-5 h-5 mt-0.5 text-red-400 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                          <span
+                            ><strong>Individual employment contract</strong> for employees</span
+                          >
+                        </li>
+                        <li class="flex items-start space-x-2">
+                          <svg
+                            class="w-5 h-5 mt-0.5 text-red-400 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                          <span
+                            ><strong>Work regulations</strong> for employees</span
+                          >
+                        </li>
+                        <li class="flex items-start space-x-2">
+                          <svg
+                            class="w-5 h-5 mt-0.5 text-red-400 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                          <span
+                            ><strong>Service contracts</strong> for suppliers</span
+                          >
+                        </li>
+                        <li class="flex items-start space-x-2">
+                          <svg
+                            class="w-5 h-5 mt-0.5 text-red-400 flex-shrink-0"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                          <span
+                            ><strong>Legal sanctions</strong> provided for in the
+                            Law</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  {t("antibribery.commitment.title")}
+                </h2>
+                <div
+                  class="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-600/30 rounded-lg p-8"
+                >
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-10 h-10 text-blue-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="text-2xl font-semibold text-gray-100 mb-4">
+                        Our Commitment
+                      </h3>
+                      <p class="text-gray-300 text-lg leading-relaxed">
+                        At Bufete Jurídico Pazos Chávez S.C. we are committed to
+                        the highest integrity and compliance with the law. We
+                        avoid any action that may damage the interests, image
+                        and reputation of our organization and our business
+                        partners.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="mt-8 pt-8 border-t border-gray-700">
+                <p class="text-sm text-gray-400 italic">
+                  Last updated: January 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+</style>
