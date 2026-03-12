@@ -1,5 +1,9 @@
 ---
 import "../styles/master.css";
+import "@fontsource/tinos/400.css";
+import "@fontsource/tinos/700.css";
+import "@fontsource/tinos/400-italic.css";
+import "@fontsource/tinos/700-italic.css";
 
 interface Props {
   title: string;
@@ -28,14 +32,6 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -48,21 +44,5 @@ const {
   </head>
   <body class="bg-white text-gray-900">
     <slot />
-    <script>
-      const buildTimestamp = "2026-01-14T11:30:00Z";
-      const gitCommit = "b11d783";
-      console.log(
-        `%c🚀 Pazos Chávez Website`,
-        "color: #3B82F6; font-size: 16px; font-weight: bold"
-      );
-      console.log(`%cBuild: ${buildTimestamp}`, "color: #10B981");
-      console.log(`%cCommit: ${gitCommit}`, "color: #10B981");
-      console.log(`%cNavbar Fixed ✅`, "color: #10B981; font-weight: bold");
-      console.log(
-        `%cLanguage: ${document.documentElement.lang}`,
-        "color: #8B5CF6"
-      );
-      console.log(`%cBase URL: ${import.meta.env.BASE_URL}`, "color: #8B5CF6");
-    </script>
   </body>
 </html>
