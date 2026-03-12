@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# SES credentials — never commit
+public/api/ses_credentials.php
+
 # macOS-specific files
 .DS_Store
 

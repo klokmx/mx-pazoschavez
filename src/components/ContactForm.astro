@@ -78,7 +78,7 @@ const t = useTranslations(lang);
                 {t("contact.email")}
               </h3>
               <a
-                href="mailto:contacto@pazoschavez.mx"
+                href="mailto:klokmx@gmail.com"
                 class="text-main-blue-500 hover:text-main-blue-700 break-all"
               >
                 contacto@pazoschavez.mx
@@ -126,7 +126,7 @@ const t = useTranslations(lang);
         <!-- Social Media -->
         <div class="flex space-x-4 pt-4">
           <a
-            href="https://www.facebook.com/asesoresyconsultoresoficial"
+            href="https://www.facebook.com/PazosChavezBufeteJuridico"
             target="_blank"
             rel="noopener noreferrer"
             class="w-12 h-12 bg-main-blue-500 rounded-lg flex items-center justify-center text-white hover:bg-main-blue-700 transition-colors shadow-md"
@@ -139,7 +139,7 @@ const t = useTranslations(lang);
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/company/asesoresyconsultoresoficial"
+            href="https://www.linkedin.com/company/pazoschavezbufetejuridico"
             target="_blank"
             rel="noopener noreferrer"
             class="w-12 h-12 bg-main-blue-700 rounded-lg flex items-center justify-center text-white hover:bg-main-blue-800 transition-colors shadow-md"
@@ -276,22 +276,46 @@ const t = useTranslations(lang);
 
 <script>
   const form = document.getElementById("contact-form") as HTMLFormElement;
+  const btn  = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    console.log("Form data:", data);
-
     const lang = document.documentElement.lang;
-    alert(
-      lang === "es"
-        ? "¡Gracias por contactarnos! Nos pondremos en contacto pronto."
-        : "Thank you for contacting us! We will get in touch soon."
-    );
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = lang === "es" ? "Enviando…" : "Sending…";
 
-    form.reset();
+    const data: Record<string, string> = {};
+    new FormData(form).forEach((v, k) => { data[k] = v.toString(); });
+
+    try {
+      const res = await fetch("/api/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        btn.textContent = lang === "es" ? "¡Mensaje enviado!" : "Message sent!";
+        btn.classList.replace("bg-main-blue-500", "bg-green-600");
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.replace("bg-green-600", "bg-main-blue-500");
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error("server error");
+      }
+    } catch {
+      btn.textContent = lang === "es" ? "Error, intente de nuevo" : "Error, try again";
+      btn.classList.replace("bg-main-blue-500", "bg-red-600");
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.replace("bg-red-600", "bg-main-blue-500");
+        btn.disabled = false;
+      }, 4000);
+    }
   });
 </script>
