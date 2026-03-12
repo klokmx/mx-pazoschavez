@@ -4,14 +4,13 @@ import { getLangFromUrl, useTranslations } from "../i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+const homeUrl = `${import.meta.env.BASE_URL}${lang === "en" ? "en" : ""}`;
+
 const navItems = [
-  {
-    key: "nav.home",
-    href: `${import.meta.env.BASE_URL}${lang === "en" ? "en" : ""}`,
-  },
-  { key: "nav.services.legal", href: `#servicios-legales` },
-  { key: "nav.services.contact", href: `#centro-contacto` },
-  { key: "nav.contact", href: `#contacto` },
+  { key: "nav.home", href: homeUrl },
+  { key: "nav.services.legal", href: `${homeUrl}#servicios-legales` },
+  { key: "nav.services.contact", href: `${homeUrl}#centro-contacto` },
+  { key: "nav.contact", href: `${homeUrl}#contacto` },
 ];
 
 // Get current page path without language prefix or base URL for language switching

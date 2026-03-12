@@ -69,7 +69,7 @@ const t = translations[lang];
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#contacto"
+            href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}#contacto`}
             class="inline-flex items-center justify-center px-8 py-4 bg-white text-main-blue-500 rounded-lg font-semibold hover:bg-main-blue-50 transition-colors shadow-lg"
           >
             {t.requestConsultation}
@@ -196,7 +196,7 @@ const t = translations[lang];
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={lang === "es" ? "/#contacto" : "/en/#contacto"}
+              href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}#contacto`}
               class="inline-flex items-center justify-center px-8 py-4 bg-main-blue-500 text-white rounded-lg font-semibold hover:bg-main-blue-700 transition-colors shadow-lg"
             >
               {t.requestConsultation}

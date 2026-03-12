@@ -163,7 +163,7 @@ const categoryPath =
                 : "Our specialists are ready to assist you and answer all your questions."
             }
           </p>
-          <a href="#contacto" class="btn-primary">
+          <a href={`${import.meta.env.BASE_URL}${lang === "en" ? "en/" : ""}#contacto`} class="btn-primary">
             {t.requestConsultation}
           </a>
         </div>
