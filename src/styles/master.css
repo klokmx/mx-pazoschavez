@@ -195,10 +195,6 @@
         @apply relative h-96 bg-main-blue-950;
     }
 
-    /* Service Hero Image */
-    .service-hero-img {
-        @apply absolute inset-0 w-full h-full object-cover opacity-30;
-    }
 
     /* Service Hero Gradient */
     .service-hero-gradient {

@@ -49,7 +49,6 @@ const translations = {
 
 const t = translations[lang];
 const categoryPath = lang === "es" ? "centro-contacto" : "contact-center";
-const imagePlaceholder = `https://placehold.co/1200x600/0A2240/FFFFFF/png?text=${encodeURIComponent(service.title[lang])}`;
 ---
 
 <Layout title={service.title[lang]} lang={lang}>
@@ -57,11 +56,6 @@ const imagePlaceholder = `https://placehold.co/1200x600/0A2240/FFFFFF/png?text=$
 
   <!-- SERVICE HERO -->
   <section class="service-hero">
-    <img
-      src={imagePlaceholder}
-      alt={service.title[lang]}
-      class="service-hero-img"
-    />
     <div class="service-hero-gradient"></div>
 
     <div class="service-hero-content">
