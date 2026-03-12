@@ -192,9 +192,14 @@
 
     /* Service Hero Section */
     .service-hero {
-        @apply relative h-96 bg-main-blue-950;
+        @apply relative bg-main-blue-950;
+        height: 500px;
+        overflow: hidden;
     }
 
+    @media (max-width: 768px) {
+        .service-hero { height: 400px; }
+    }
 
     /* Service Hero Gradient */
     .service-hero-gradient {
@@ -445,6 +450,72 @@
 
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-main-blue-700;
+}
+
+/* ========== SERVICE CARDS ========== */
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-card-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: white;
+}
+
+.service-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #0a2240;
+}
+
+.service-card-description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ========== PROSE ========== */
+.prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.prose h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.prose p {
+    margin-bottom: 1rem;
+}
+
+.prose ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* ========== PRINT STYLES ========== */
