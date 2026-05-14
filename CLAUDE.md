@@ -1,185 +1,67 @@
-# Claude Context - MX Pazos Chavez Website
+# CLAUDE.md — pazoschavez.mx
 
-## Project Overview
-Astro-based bilingual (Spanish/English) website for Bufete Jurídico Pazos Chávez - a legal services and contact center firm.
+Este archivo le indica a Claude cómo trabajar en este proyecto.
 
-**Live Site:** https://pi.klok.mx/mx-pazoschavez  
-**Repository:** github.com:klokmx/mx-pazoschavez.git
+## Al iniciar cada sesión
 
-## Technology Stack
-- **Framework:** Astro 5.16.5
-- **Styling:** Tailwind CSS 4.1.17 with @tailwindcss/vite
-- **Package Manager:** pnpm
-- **Deployment:** GitHub Pages (subdirectory deployment)
+1. Leer este archivo y revisar `CONTEXT.md`, `PROJECT_SUMMARY.md` y `SERVICE_REFACTORING.md` si la tarea toca contenido, estructura de servicios o arquitectura de componentes.
+2. Si la tarea es de deploy, configuración de nginx o build: **antes** verificar lo marcado como "asumido, verificar" en la sección Server más abajo. No hay aún un `DEPLOYMENT.md` operativo confirmado.
 
-## Critical Configuration
+## Sobre el proyecto
 
-### Base Path Setup
-The site is deployed to a **subdirectory** (`/mx-pazoschavez/`), not root. This requires special handling:
+- **Cliente:** Bufete Jurídico Pazos Chávez — servicios legales y centro de contacto.
+- **Sitio:** https://www.pazoschavez.mx
+- **Stack:** Astro 5.16.5 (**estático puro**, sin SSR) · Tailwind 4 (`@tailwindcss/vite`) · `@astrojs/sitemap` · pnpm.
+- **i18n nativo de Astro:** `es` default sin prefijo, `en` con prefijo `/en/`.
+- **Build output:** `dist/` plano (no `dist/client` + `dist/server` — no aplica porque no es SSR).
 
-**astro.config.mjs:**
-```javascript
-const base = process.env.NODE_ENV === "production" ? "/mx-pazoschavez/" : "/";
-```
-⚠️ **IMPORTANT:** The trailing slash in `/mx-pazoschavez/` is REQUIRED for proper asset concatenation.
+## Server (Plesk · GroovyHosting)
 
-### Asset & Link Pattern
-**ALL** static assets and internal links MUST use `import.meta.env.BASE_URL`:
+- **Server:** Plesk Ubuntu, subdominio bajo `elpodersomostodos.org` (espejo de la subscription donde vive `asecon.mx`).
+- **App root (asumido, verificar):** `/var/www/vhosts/elpodersomostodos.org/pazoschavez.mx/`
+- **Doc root nginx (asumido, verificar):** `.../pazoschavez.mx/dist/`
+- **No usa PM2 ni puerto Node** — al ser build estático, nginx sirve los HTML directo desde `dist/`.
+- **Deploy (asumido, verificar):** build local (`pnpm build`) → subir contenido de `dist/` por SFTP al doc root → listo (sin `pm2 restart` porque no hay proceso Node).
 
-```astro
-<!-- ✅ CORRECT -->
-<img src={import.meta.env.BASE_URL + "images/logo.svg"} />
-<a href={import.meta.env.BASE_URL + "en"}>English</a>
-<a href={import.meta.env.BASE_URL + "servicios-legales/derecho-fiscal"}>Service</a>
+> Las líneas marcadas "asumido, verificar" están extrapoladas de la convención del repo hermano `mx-asecon`. Antes de operar el server por primera vez en una sesión, confirmar con `ls` por SFTP o con el usuario.
 
-<!-- ❌ WRONG -->
-<img src="/images/logo.svg" />
-<a href="/en">English</a>
-<a href="/servicios-legales/derecho-fiscal">Service</a>
-```
+## Reglas de oro
 
-**Exception:** Same-page hash links don't need BASE_URL:
-```astro
-<!-- ✅ OK -->
-<a href="#contacto">Contact</a>
-<a href="#servicios-legales">Services</a>
-```
+- El `site` en `astro.config.mjs` SIEMPRE es `https://www.pazoschavez.mx` (con www) — nunca cambiarlo.
+- `base: "/"` es lo correcto hoy (subdominio propio, no subdirectorio). No restaurar el `/mx-pazoschavez/` del esquema viejo de GitHub Pages.
+- Una sola `<h1>` por página.
+- Páginas legales (`quejas.astro`, `antisoborno.astro`, `privacidad.astro`, `seguridad.astro`) y rutas dinámicas de servicio individuales: `noindex, nofollow`.
+- No hacer clic en "NPM install" en Plesk Node.js — este sitio no es Node, es estático.
 
-## Project Structure
+## Patrón heredado: `import.meta.env.BASE_URL`
+
+Componentes (`Navbar`, `Footer`, `Hero`, `ServiceTemplate`, `ServiceDetailPage`, `ContactCenterDetailPage`, `LegalServices`) usan `import.meta.env.BASE_URL` para construir hrefs e `src` de imágenes. Esto sobra hoy (`BASE_URL === "/"` con la config actual), pero **no rompe nada** y simplificarlo es trabajo separado.
+
+Reglas mientras siga ese patrón en el código:
+
+- Usar `${import.meta.env.BASE_URL}path/al/recurso` (sin slash inicial en la parte derecha — BASE_URL ya trae el `/` final).
+- Hash links de misma página NO necesitan BASE_URL: `<a href="#contacto">` está bien.
+
+Si en algún punto se decide limpiar, reemplazar `${import.meta.env.BASE_URL}` por `/` de forma plana y verificar que ningún build futuro vuelva a meter `base` distinto a `/`.
+
+## Estructura relevante
 
 ```
 src/
-├── components/          # Astro components
-│   ├── Navbar.astro            # Main navigation
-│   ├── Hero.astro              # Homepage hero
-│   ├── Footer.astro            # Site footer
-│   ├── LegalServices.astro     # Legal services section
-│   ├── ContactCenter.astro     # Contact center section
-│   ├── ServiceDetailPage.astro # Legal service detail template
-│   └── ContactCenterDetailPage.astro  # Contact center detail template
-├── content/            # JSON content files
-│   ├── legal-services/         # Legal service definitions
-│   └── contact-center/         # Contact center service definitions
-├── data/               # TypeScript data files
-│   ├── legalServices.ts
-│   └── contactCenterServices.ts
-├── i18n/               # Internationalization
-│   ├── index.ts        # Language detection
-│   └── ui.ts           # Translation strings
-├── layouts/
-│   └── Layout.astro    # Base HTML layout
-├── pages/              # File-based routing
-│   ├── index.astro     # Spanish homepage
-│   ├── servicios-legales/[slug].astro  # Spanish legal services
-│   ├── centro-contacto/[slug].astro    # Spanish contact center
-│   └── en/             # English versions
-└── styles/
-    ├── master.css      # Main stylesheet
-    └── global.css      # Global styles
+├── components/        # Astro components (Navbar, Hero, Footer, Service*)
+├── content/           # JSON de servicios (legal-services/, contact-center/)
+├── data/              # legalServices.ts, contactCenterServices.ts
+├── i18n/              # index.ts (detección de idioma) + ui.ts (strings)
+├── layouts/           # Layout.astro
+├── pages/             # index.astro · /en/ · /servicios-legales/[slug] · /centro-contacto/[slug] · páginas legales
+└── styles/            # master.css, global.css, klok.css, theme.ts
 ```
 
-## Internationalization (i18n)
-
-**Default Locale:** Spanish (es)  
-**Supported Locales:** Spanish (es), English (en)
-
-**URL Structure:**
-- Spanish: `/` (root)
-- English: `/en/`
-
-**Helper Functions:**
-```typescript
-import { getLangFromUrl, useTranslations } from "../i18n";
-
-const lang = getLangFromUrl(Astro.url);  // "es" | "en"
-const t = useTranslations(lang);         // Translation function
-```
-
-## Service Categories
-
-### Legal Services (`servicios-legales`)
-- Asesoría y Consultoría
-- Derecho Fiscal
-- Derecho Civil y Mercantil
-- Derecho Familiar
-- Derecho Administrativo
-- Expropiación e Indemnizaciones
-- Patentes y Marcas
-- Cobranza Judicial y Extrajudicial
-
-### Contact Center (`centro-contacto`)
-- Atención a Clientes
-- Soporte Técnico
-- Blasters
-- SMS y Correos Masivos
-- Programas de Lealtad
-- Depuración de Base de Datos
-- Renta de Estaciones e Infraestructura
-- IVRs
-- Realización de Encuestas
-- Personal Domiciliario
-- Servicios para el Sector Médico
-- Business Continuity & DRP
-- Fulfillment
-
-## Common Commands
+## Comandos
 
 ```bash
-# Development
-pnpm run dev          # Start dev server (http://localhost:4321)
-
-# Build
-pnpm run build        # Build for production (outputs to dist/)
-
-# Preview
-pnpm run preview      # Preview production build locally
-
-# Git workflow
-git add -A
-git commit -m "message"
-git push
+pnpm install
+pnpm run dev          # http://localhost:4321
+pnpm run build        # genera dist/
+pnpm run preview      # preview local del build
 ```
-
-## Recent Fixes (January 2026)
-
-### 1. Subdirectory Deployment Assets
-Fixed all hardcoded absolute paths to use `import.meta.env.BASE_URL`:
-- Image sources in Navbar, Hero, Footer
-- Favicon link in Layout
-- Background images (converted CSS to inline styles)
-
-### 2. Navigation Links
-Updated all internal navigation to use BASE_URL:
-- Navbar home and logo links
-- Service card links
-- Related services links
-- Language switcher links
-- "View all" links
-
-### 3. Base Path Configuration
-Added trailing slash to production base path for proper concatenation:
-- Changed from `/mx-pazoschavez` to `/mx-pazoschavez/`
-
-## Important Notes
-
-⚠️ **Never use hardcoded paths starting with `/`** for internal assets or links (except hash anchors)
-
-⚠️ **BASE_URL already includes trailing slash** - don't add extra slashes:
-```astro
-<!-- ✅ CORRECT -->
-{import.meta.env.BASE_URL + "images/logo.svg"}
-
-<!-- ❌ WRONG - double slash -->
-{import.meta.env.BASE_URL + "/images/logo.svg"}
-```
-
-⚠️ **CSS background images** should be inline styles, not CSS classes, when using dynamic paths
-
-## TypeScript Errors (Known Issues)
-- ServiceDetailPage.astro has type mismatches between ContactCenterService and LegalService types
-- These are pre-existing and don't affect functionality
-
-## Next Steps / TODO
-- Consider creating proper TypeScript interfaces for service types
-- Define collections in `src/content.config.ts` (currently auto-generated)
-- Add more content for legal-services and contact-center collections
