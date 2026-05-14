@@ -144,6 +144,7 @@ export const ui = {
     // Footer
     'footer.rights': 'Todos los derechos reservados',
     'footer.privacy': 'Aviso de Privacidad',
+    'footer.quality': 'Sistema de Gestión de Calidad',
     'footer.security': 'Seguridad de la Información',
     'footer.antibribery': 'Política Antisoborno',
     'footer.complaints': 'Quejas',
@@ -323,6 +324,7 @@ export const ui = {
     // Footer
     'footer.rights': 'All rights reserved',
     'footer.privacy': 'Privacy Policy',
+    'footer.quality': 'Quality Management System',
     'footer.security': 'Information Security',
     'footer.antibribery': 'Anti-Bribery Policy',
     'footer.complaints': 'Complaints',

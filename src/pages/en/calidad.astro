@@ -1,0 +1,135 @@
+---
+// By klok for the Glory of Jesus · 05-2026
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Quality Management System ISO 9001-2015 | Bufete Jurídico Pazos Chávez"
+  description="ISO 9001-2015 Quality Policy of Bufete Jurídico Pazos Chávez S.C."
+  lang="en"
+>
+  <Navbar />
+  <main
+    class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
+  >
+    <div class="container mx-auto px-4 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+          <a
+            href={`${import.meta.env.BASE_URL}en`}
+            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-6"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+          </a>
+          <h1
+            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+          >
+            QUALITY
+          </h1>
+          <p class="text-xl text-gray-400">ISO 9001-2015</p>
+        </div>
+
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 md:p-12 shadow-2xl border border-gray-700"
+        >
+          <div class="prose prose-invert prose-lg max-w-none">
+            <div class="text-gray-300 space-y-8 leading-relaxed">
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  1. OUR QUALITY POLICY
+                </h2>
+                <p class="text-gray-300">
+                  At Bufete Jurídico Pazos Chávez S.C., we are committed to
+                  providing Contact Center services for the Administration and
+                  Recovery of Credit Portfolio in Extrajudicial and Judicial
+                  Form, Notifications, as well as Customer Service that meet
+                  the requirements of interested parties through compliance
+                  with Management plans and strategies and quality objectives,
+                  as well as the continuous improvement of the Quality
+                  Management System within the applicable legal framework.
+                </p>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  2. OUR MISSION
+                </h2>
+                <div class="bg-gray-700/30 p-6 rounded-lg border-l-4 border-blue-400">
+                  <p class="text-gray-300 italic">
+                    "To provide professional services in accordance with
+                    quality standards, within a framework of values,
+                    integrating the capabilities and efforts of our
+                    collaborators, in an environment of continuous improvement
+                    that fosters the permanent development of those who
+                    contribute to the objectives of the organization, for the
+                    benefit of society."
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  3. OUR VISION
+                </h2>
+                <div class="bg-gray-700/30 p-6 rounded-lg border-l-4 border-blue-400">
+                  <p class="text-gray-300 italic">
+                    "To consolidate ourselves as a leading company in the
+                    provision of the services we offer; to achieve that our
+                    work team integrates and consolidates around personal
+                    ideals and objectives, and those of the organization, and
+                    to build for our clients and suppliers an image of trust
+                    grounded in the values that constitute our permanent
+                    commitment."
+                  </p>
+                </div>
+              </section>
+
+              <section>
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">
+                  4. TECHNOLOGICAL VISION
+                </h2>
+                <ol
+                  class="list-decimal list-inside space-y-3 text-gray-300 ml-4"
+                >
+                  <li>
+                    For us, technology is one of the fundamental pillars of
+                    our activities. We are convinced that the synergy between
+                    human capital and the best technology will allow us to
+                    achieve all our objectives more quickly.
+                  </li>
+                  <li>
+                    That is why at Bufete Jurídico Pazos Chávez S.C. we have
+                    highly qualified personnel in this area, modern
+                    communications and security equipment, and the best
+                    systems to interact with clients and store information.
+                  </li>
+                  <li>
+                    The above allows us to guarantee each of our clients that
+                    their information is safe in our hands, and that we will
+                    use all technological innovations to offer them the best
+                    results.
+                  </li>
+                </ol>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
