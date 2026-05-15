@@ -5,25 +5,48 @@ Este archivo le indica a Claude cómo trabajar en este proyecto.
 ## Al iniciar cada sesión
 
 1. Leer este archivo y revisar `CONTEXT.md`, `PROJECT_SUMMARY.md` y `SERVICE_REFACTORING.md` si la tarea toca contenido, estructura de servicios o arquitectura de componentes.
-2. Si la tarea es de deploy, configuración de nginx o build: **antes** verificar lo marcado como "asumido, verificar" en la sección Server más abajo. No hay aún un `DEPLOYMENT.md` operativo confirmado.
 
 ## Sobre el proyecto
 
 - **Cliente:** Bufete Jurídico Pazos Chávez — servicios legales y centro de contacto.
-- **Sitio:** https://www.pazoschavez.mx
+- **Sitio:** https://pazoschavez.mx (nginx canonicaliza **sin www**, opuesto a asecon que es con www).
 - **Stack:** Astro 5.16.5 (**estático puro**, sin SSR) · Tailwind 4 (`@tailwindcss/vite`) · `@astrojs/sitemap` · pnpm.
 - **i18n nativo de Astro:** `es` default sin prefijo, `en` con prefijo `/en/`.
 - **Build output:** `dist/` plano (no `dist/client` + `dist/server` — no aplica porque no es SSR).
 
-## Server (Plesk · GroovyHosting)
+## Server (Plesk · GroovyHosting) — verificado mayo 2026
 
-- **Server:** Plesk Ubuntu, subdominio bajo `elpodersomostodos.org` (espejo de la subscription donde vive `asecon.mx`).
-- **App root (asumido, verificar):** `/var/www/vhosts/elpodersomostodos.org/pazoschavez.mx/`
-- **Doc root nginx (asumido, verificar):** `.../pazoschavez.mx/dist/`
-- **No usa PM2 ni puerto Node** — al ser build estático, nginx sirve los HTML directo desde `dist/`.
-- **Deploy (asumido, verificar):** build local (`pnpm build`) → subir contenido de `dist/` por SFTP al doc root → listo (sin `pm2 restart` porque no hay proceso Node).
+- **Server:** Plesk Ubuntu, subdominio bajo `elpodersomostodos.org` (misma subscription que `asecon.mx`).
+- **App root y doc root nginx (ambos):** `/var/www/vhosts/elpodersomostodos.org/pazoschavez.mx/` — el doc root es la **raíz del vhost directamente**, no un subdirectorio `dist/`.
+- **Owner del vhost:** `epst_wm:psacln` (mismo user que asecon — comparten subscription).
+- **No usa PM2 ni puerto Node** — al ser build estático, nginx sirve los HTML directo desde la raíz del vhost.
+- **Acceso al server:** `ssh groovy` (alias en `~/.ssh/config`, user `ubuntu`, passwordless sudo). Para tocar `/var/www/vhosts/...` requiere `sudo`.
 
-> Las líneas marcadas "asumido, verificar" están extrapoladas de la convención del repo hermano `mx-asecon`. Antes de operar el server por primera vez en una sesión, confirmar con `ls` por SFTP o con el usuario.
+## Deploy
+
+```bash
+# 1. Local — build
+pnpm run build
+
+# 2. Subir dist/ al server (sin --delete: hay archivos no-Astro que deben preservarse)
+rsync -avz --rsync-path="sudo rsync" dist/ groovy:/var/www/vhosts/elpodersomostodos.org/pazoschavez.mx/
+
+# 3. Fijar ownership consistente con el resto del vhost
+ssh groovy "sudo chown -R epst_wm:psacln /var/www/vhosts/elpodersomostodos.org/pazoschavez.mx/"
+
+# 4. Verificar (sin pm2 restart — es estático)
+curl -sSL -o /dev/null -w "HTTP:%{http_code}\n" https://pazoschavez.mx/
+```
+
+### Archivos en server que NO están en el repo (preservar, no borrar)
+
+El vhost contiene estos archivos no rastreados — agregados manualmente al server, NO deben borrarse:
+
+- `googleada8b01edb37a6d5.html` — verificación de Search Console
+- `robots.txt`, `site.webmanifest`
+- `apple-touch-icon.png`, `favicon.ico`, `favicon.png`, `icon-192.png`, `icon-512.png`
+
+Por eso el rsync va **sin** `--delete`. Si se necesita una limpieza completa, descargar primero estos archivos al repo o respaldarlos.
 
 ## Reglas de oro
 
